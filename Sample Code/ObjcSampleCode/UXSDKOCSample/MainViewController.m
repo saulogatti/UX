@@ -31,12 +31,12 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-
+    
     NSString *versionString = [DJISDKManager SDKVersion];
     if (versionString != nil) {
         self.version.text = [NSString stringWithFormat:@"Version %@", [DJISDKManager SDKVersion]];
     }
-
+    
 }
 
 
@@ -55,11 +55,11 @@
 - (IBAction)registerButton:(id)sender {
     
     [self registerWithProduct];
-
+    
 }
 
 - (IBAction)connectButton:(id)sender {
-
+    
     [self connectToProduct];
 }
 
@@ -105,11 +105,6 @@
     }
     
     //If this demo is used in China, it's required to login to your DJI account to activate the application. Also you need to use DJI Go app to bind the aircraft to your DJI account. For more details, please check this demo's tutorial.
-    [[DJISDKManager userAccountManager] logIntoDJIUserAccountWithAuthorizationRequired:NO withCompletion:^(DJIUserAccountState state, NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"Login failed: %@", error.description);
-        }
-    }];
 }
 
 - (void)productDisconnected{

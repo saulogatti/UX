@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		6F6E5993738A16F9553D4DDD /* libPods-UXSDKOCSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46472615B205007AB96C0CBA /* libPods-UXSDKOCSample.a */; };
+		A154C45E216C1B03003B0053 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = A154C456216C1B02003B0053 /* config.json */; };
+		A154C462216C1B03003B0053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A154C45A216C1B02003B0053 /* Assets.xcassets */; };
+		A154C467216C1BEC003B0053 /* Oficial5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A154C466216C1B95003B0053 /* Oficial5.storyboard */; };
+		A154C473216C1CA8003B0053 /* MOSJSONDynamicController.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C46C216C1CA7003B0053 /* MOSJSONDynamicController.m */; };
+		A154C474216C1CA8003B0053 /* MOSLogConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C46D216C1CA8003B0053 /* MOSLogConsoleViewController.m */; };
+		A154C475216C1CA8003B0053 /* MOSMainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C46F216C1CA8003B0053 /* MOSMainTabViewController.m */; };
+		A154C476216C1CA8003B0053 /* MOSLogConsoleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A154C470216C1CA8003B0053 /* MOSLogConsoleViewController.xib */; };
+		A154C48B216C1CD6003B0053 /* ButtonOff.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C47C216C1CD6003B0053 /* ButtonOff.m */; };
+		A154C48C216C1CD6003B0053 /* ButtonOn.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C47E216C1CD6003B0053 /* ButtonOn.m */; };
+		A154C48D216C1CD6003B0053 /* MOSDynamicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C47F216C1CD6003B0053 /* MOSDynamicTableViewCell.m */; };
+		A154C48E216C1CD6003B0053 /* MOSDynamicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A154C481216C1CD6003B0053 /* MOSDynamicTableViewCell.xib */; };
+		A154C48F216C1CD6003B0053 /* MOSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C482216C1CD6003B0053 /* MOSModel.m */; };
+		A154C490216C1CD6003B0053 /* MOSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C484216C1CD6003B0053 /* MOSAction.m */; };
+		A154C491216C1CD6003B0053 /* MOSSection.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C486216C1CD6003B0053 /* MOSSection.m */; };
+		A154C492216C1CD6003B0053 /* MOSProductCommunicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C489216C1CD6003B0053 /* MOSProductCommunicationManager.m */; };
+		A154C499216C1D67003B0053 /* ColorSuporte.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C495216C1D67003B0053 /* ColorSuporte.m */; };
 		ACFBF812207C24250058A720 /* WidgetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFBF7FC207C24250058A720 /* WidgetsViewController.m */; };
 		ACFBF813207C24250058A720 /* MyBatteryWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFBF7FF207C24250058A720 /* MyBatteryWidget.m */; };
 		ACFBF814207C24250058A720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACFBF801207C24250058A720 /* Assets.xcassets */; };
@@ -20,7 +36,6 @@
 		ACFBF81B207C24250058A720 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFBF80B207C24250058A720 /* AppDelegate.m */; };
 		ACFBF81C207C24250058A720 /* DefaultLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFBF80C207C24250058A720 /* DefaultLayoutViewController.m */; };
 		ACFBF81D207C24250058A720 /* PanelsCollectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFBF80D207C24250058A720 /* PanelsCollectionsViewController.m */; };
-		ACFBF81E207C24250058A720 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACFBF810207C24250058A720 /* Info.plist */; };
 		ACFBF81F207C24250058A720 /* Widgets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFBF811207C24250058A720 /* Widgets.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +55,35 @@
 /* Begin PBXFileReference section */
 		06EE100A9FE67BED56866C40 /* Pods-UXSDKOCSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UXSDKOCSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-UXSDKOCSample/Pods-UXSDKOCSample.release.xcconfig"; sourceTree = "<group>"; };
 		46472615B205007AB96C0CBA /* libPods-UXSDKOCSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UXSDKOCSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A154C456216C1B02003B0053 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
+		A154C45A216C1B02003B0053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A154C466216C1B95003B0053 /* Oficial5.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Oficial5.storyboard; sourceTree = "<group>"; };
+		A154C46C216C1CA7003B0053 /* MOSJSONDynamicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOSJSONDynamicController.m; sourceTree = "<group>"; };
+		A154C46D216C1CA8003B0053 /* MOSLogConsoleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOSLogConsoleViewController.m; sourceTree = "<group>"; };
+		A154C46E216C1CA8003B0053 /* MOSMainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOSMainTabViewController.h; sourceTree = "<group>"; };
+		A154C46F216C1CA8003B0053 /* MOSMainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOSMainTabViewController.m; sourceTree = "<group>"; };
+		A154C470216C1CA8003B0053 /* MOSLogConsoleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MOSLogConsoleViewController.xib; sourceTree = "<group>"; };
+		A154C471216C1CA8003B0053 /* MOSJSONDynamicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOSJSONDynamicController.h; sourceTree = "<group>"; };
+		A154C472216C1CA8003B0053 /* MOSLogConsoleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOSLogConsoleViewController.h; sourceTree = "<group>"; };
+		A154C47B216C1CD6003B0053 /* ButtonOn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonOn.h; sourceTree = "<group>"; };
+		A154C47C216C1CD6003B0053 /* ButtonOff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonOff.m; sourceTree = "<group>"; };
+		A154C47D216C1CD6003B0053 /* ButtonOff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonOff.h; sourceTree = "<group>"; };
+		A154C47E216C1CD6003B0053 /* ButtonOn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonOn.m; sourceTree = "<group>"; };
+		A154C47F216C1CD6003B0053 /* MOSDynamicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOSDynamicTableViewCell.m; sourceTree = "<group>"; };
+		A154C480216C1CD6003B0053 /* MOSDynamicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOSDynamicTableViewCell.h; sourceTree = "<group>"; };
+		A154C481216C1CD6003B0053 /* MOSDynamicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MOSDynamicTableViewCell.xib; sourceTree = "<group>"; };
+		A154C482216C1CD6003B0053 /* MOSModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOSModel.m; sourceTree = "<group>"; };
+		A154C483216C1CD6003B0053 /* MOSSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOSSection.h; sourceTree = "<group>"; };
+		A154C484216C1CD6003B0053 /* MOSAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOSAction.m; sourceTree = "<group>"; };
+		A154C485216C1CD6003B0053 /* MOSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOSModel.h; sourceTree = "<group>"; };
+		A154C486216C1CD6003B0053 /* MOSSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOSSection.m; sourceTree = "<group>"; };
+		A154C487216C1CD6003B0053 /* MOSAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOSAction.h; sourceTree = "<group>"; };
+		A154C489216C1CD6003B0053 /* MOSProductCommunicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOSProductCommunicationManager.m; sourceTree = "<group>"; };
+		A154C48A216C1CD6003B0053 /* MOSProductCommunicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOSProductCommunicationManager.h; sourceTree = "<group>"; };
+		A154C494216C1D67003B0053 /* Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enum.h; sourceTree = "<group>"; };
+		A154C495216C1D67003B0053 /* ColorSuporte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSuporte.m; sourceTree = "<group>"; };
+		A154C496216C1D67003B0053 /* ColorSuporte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSuporte.h; sourceTree = "<group>"; };
+		A154C498216C1D67003B0053 /* StatusProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusProtocol.h; sourceTree = "<group>"; };
 		A4A189081EA1291E00D06BF0 /* UXSDKOCSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UXSDKOCSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFBF7FC207C24250058A720 /* WidgetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetsViewController.m; sourceTree = "<group>"; };
 		ACFBF7FD207C24250058A720 /* DefaultLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultLayoutViewController.h; sourceTree = "<group>"; };
@@ -76,6 +120,99 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A154C455216C1A94003B0053 /* Oficial5 */ = {
+			isa = PBXGroup;
+			children = (
+				A154C493216C1D67003B0053 /* Utils */,
+				A154C478216C1CD6003B0053 /* Model */,
+				A154C488216C1CD6003B0053 /* Network */,
+				A154C46B216C1C97003B0053 /* ViewController */,
+				A154C466216C1B95003B0053 /* Oficial5.storyboard */,
+				A154C45A216C1B02003B0053 /* Assets.xcassets */,
+				A154C456216C1B02003B0053 /* config.json */,
+			);
+			path = Oficial5;
+			sourceTree = "<group>";
+		};
+		A154C46B216C1C97003B0053 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A154C471216C1CA8003B0053 /* MOSJSONDynamicController.h */,
+				A154C46C216C1CA7003B0053 /* MOSJSONDynamicController.m */,
+				A154C472216C1CA8003B0053 /* MOSLogConsoleViewController.h */,
+				A154C46D216C1CA8003B0053 /* MOSLogConsoleViewController.m */,
+				A154C470216C1CA8003B0053 /* MOSLogConsoleViewController.xib */,
+				A154C46E216C1CA8003B0053 /* MOSMainTabViewController.h */,
+				A154C46F216C1CA8003B0053 /* MOSMainTabViewController.m */,
+			);
+			name = ViewController;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A154C478216C1CD6003B0053 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A154C479216C1CD6003B0053 /* UI */,
+				A154C482216C1CD6003B0053 /* MOSModel.m */,
+				A154C483216C1CD6003B0053 /* MOSSection.h */,
+				A154C484216C1CD6003B0053 /* MOSAction.m */,
+				A154C485216C1CD6003B0053 /* MOSModel.h */,
+				A154C486216C1CD6003B0053 /* MOSSection.m */,
+				A154C487216C1CD6003B0053 /* MOSAction.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A154C479216C1CD6003B0053 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A154C47A216C1CD6003B0053 /* Botao */,
+				A154C47F216C1CD6003B0053 /* MOSDynamicTableViewCell.m */,
+				A154C480216C1CD6003B0053 /* MOSDynamicTableViewCell.h */,
+				A154C481216C1CD6003B0053 /* MOSDynamicTableViewCell.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A154C47A216C1CD6003B0053 /* Botao */ = {
+			isa = PBXGroup;
+			children = (
+				A154C47B216C1CD6003B0053 /* ButtonOn.h */,
+				A154C47C216C1CD6003B0053 /* ButtonOff.m */,
+				A154C47D216C1CD6003B0053 /* ButtonOff.h */,
+				A154C47E216C1CD6003B0053 /* ButtonOn.m */,
+			);
+			path = Botao;
+			sourceTree = "<group>";
+		};
+		A154C488216C1CD6003B0053 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A154C489216C1CD6003B0053 /* MOSProductCommunicationManager.m */,
+				A154C48A216C1CD6003B0053 /* MOSProductCommunicationManager.h */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A154C493216C1D67003B0053 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A154C494216C1D67003B0053 /* Enum.h */,
+				A154C495216C1D67003B0053 /* ColorSuporte.m */,
+				A154C496216C1D67003B0053 /* ColorSuporte.h */,
+				A154C497216C1D67003B0053 /* Protocols */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A154C497216C1D67003B0053 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A154C498216C1D67003B0053 /* StatusProtocol.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		A4A188FF1EA1291E00D06BF0 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +242,7 @@
 		ACFBF7FB207C24250058A720 /* UXSDKOCSample */ = {
 			isa = PBXGroup;
 			children = (
+				A154C455216C1A94003B0053 /* Oficial5 */,
 				ACFBF801207C24250058A720 /* Assets.xcassets */,
 				ACFBF802207C24250058A720 /* PanelsCollections.storyboard */,
 				ACFBF803207C24250058A720 /* LaunchScreen.storyboard */,
@@ -151,7 +289,6 @@
 				A4A189061EA1291E00D06BF0 /* Resources */,
 				A4A189451EA12B4700D06BF0 /* Embed Frameworks */,
 				43AB897ECF73EE6BAA391FB6 /* [CP] Embed Pods Frameworks */,
-				6CCDA6245044DC0F5D5F44A2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,12 +305,11 @@
 		A4A189001EA1291E00D06BF0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = DJI;
 				TargetAttributes = {
 					A4A189071EA1291E00D06BF0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 7UL3LRJL93;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -201,12 +337,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A154C476216C1CA8003B0053 /* MOSLogConsoleViewController.xib in Resources */,
+				A154C45E216C1B03003B0053 /* config.json in Resources */,
 				ACFBF81A207C24250058A720 /* DefaultLayout.storyboard in Resources */,
 				ACFBF816207C24250058A720 /* LaunchScreen.storyboard in Resources */,
+				A154C462216C1B03003B0053 /* Assets.xcassets in Resources */,
+				A154C48E216C1CD6003B0053 /* MOSDynamicTableViewCell.xib in Resources */,
 				ACFBF817207C24250058A720 /* Main.storyboard in Resources */,
+				A154C467216C1BEC003B0053 /* Oficial5.storyboard in Resources */,
 				ACFBF814207C24250058A720 /* Assets.xcassets in Resources */,
 				ACFBF81F207C24250058A720 /* Widgets.storyboard in Resources */,
-				ACFBF81E207C24250058A720 /* Info.plist in Resources */,
 				ACFBF815207C24250058A720 /* PanelsCollections.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,30 +363,17 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-UXSDKOCSample/Pods-UXSDKOCSample-frameworks.sh",
 				"${PODS_ROOT}/DJI-SDK-iOS/iOS_Mobile_SDK/DJISDK.framework",
 				"${PODS_ROOT}/DJI-UXSDK-iOS/iOS_UXSDK/DJIUXSDK.framework",
+				"${PODS_ROOT}/DJIWidget/FFmpeg/FFmpeg.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DJISDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DJIUXSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FFmpeg.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UXSDKOCSample/Pods-UXSDKOCSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6CCDA6245044DC0F5D5F44A2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UXSDKOCSample/Pods-UXSDKOCSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EF3F83FA9431056465867772 /* [CP] Check Pods Manifest.lock */ = {
@@ -264,7 +391,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -278,9 +405,20 @@
 				ACFBF818207C24250058A720 /* MainViewController.m in Sources */,
 				ACFBF81C207C24250058A720 /* DefaultLayoutViewController.m in Sources */,
 				ACFBF813207C24250058A720 /* MyBatteryWidget.m in Sources */,
+				A154C474216C1CA8003B0053 /* MOSLogConsoleViewController.m in Sources */,
 				ACFBF81B207C24250058A720 /* AppDelegate.m in Sources */,
+				A154C48C216C1CD6003B0053 /* ButtonOn.m in Sources */,
+				A154C48F216C1CD6003B0053 /* MOSModel.m in Sources */,
+				A154C499216C1D67003B0053 /* ColorSuporte.m in Sources */,
 				ACFBF819207C24250058A720 /* main.m in Sources */,
+				A154C475216C1CA8003B0053 /* MOSMainTabViewController.m in Sources */,
+				A154C48D216C1CD6003B0053 /* MOSDynamicTableViewCell.m in Sources */,
+				A154C491216C1CD6003B0053 /* MOSSection.m in Sources */,
+				A154C490216C1CD6003B0053 /* MOSAction.m in Sources */,
 				ACFBF81D207C24250058A720 /* PanelsCollectionsViewController.m in Sources */,
+				A154C473216C1CA8003B0053 /* MOSJSONDynamicController.m in Sources */,
+				A154C48B216C1CD6003B0053 /* ButtonOff.m in Sources */,
+				A154C492216C1CD6003B0053 /* MOSProductCommunicationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,15 +453,24 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -363,15 +510,24 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -401,12 +557,13 @@
 			baseConfigurationReference = F5B19026C9DEFD6AFBB8F77A /* Pods-UXSDKOCSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7UL3LRJL93;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)/../DJIWidget/**",
+					"$(PROJECT_DIR)/UXSDKOCSample",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/UXSDKOCSample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -421,12 +578,13 @@
 			baseConfigurationReference = 06EE100A9FE67BED56866C40 /* Pods-UXSDKOCSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7UL3LRJL93;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)/../DJIWidget/**",
+					"$(PROJECT_DIR)/UXSDKOCSample",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/UXSDKOCSample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

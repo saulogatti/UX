@@ -1,0 +1,60 @@
+{
+    "Core Functions" : [
+                        
+                        {
+                        "key" : "activation",
+                        "cmd_idOn" : "0x04",
+                        "label" : "Activate Drone",
+                        "ack" : true,
+                        "ack_size" : 2,
+                        "info" : "Supported on STM32.",
+                        },
+                        
+                        {
+                        "key" : "openValveOne",
+                        "cmd_idOn" : "0x4D",
+                        "cmd_idOff" : "0x4E",
+                        "label" : "Valve 1 - OPEN",
+                        "ack" : true,
+                        "ack_size" : 1,
+                        },
+                        
+                        {
+                        "key" : "openValveTwo",
+                        "cmd_idOn" : "0x4F",
+                        "cmd_idOff" : "0x50",
+                        "label" : "Valve 2 - OPEN",
+                        "ack" : true,
+                        "ack_size" : 1,
+                        },
+                        
+                        {
+                        "key" : "openValveThree",
+                        "cmd_idOn" : "0x51",
+                        "cmd_idOff" : "0x52",
+                        "label" : "Valve 3 - OPEN",
+                        "ack" : true,
+                        "ack_size" : 1,
+                        },
+                        
+                        {
+                        "key" : "openValveFour",
+                        "cmd_idOn" : "0x53",
+                        "cmd_idOff" : "0x54",
+                        "label" : "Valve 4 - OPEN",
+                        "ack" : true,
+                        "ack_size" : 1,
+                        },
+                        
+                        {
+                        "key" : "openValveFive",
+                        "cmd_idOn" : "0x55",
+                        "cmd_idOff" : "0x56",
+                        "label" : "Valve 5 - OPEN",
+                        "ack" : true,
+                        "ack_size" : 1,
+                        },
+                        
+                        
+    ]
+}

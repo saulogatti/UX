@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MOSModel.h"
+#import "MOSProductCommunicationManager.h"
 @interface AppDelegate ()
 
 @end
@@ -16,6 +17,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.model = [MOSModel new];
+    [self.model loadConfiguration];
+    
+    self.productCommunicationManager = [MOSProductCommunicationManager new];
     
     return YES;
 }
