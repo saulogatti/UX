@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Sk0-7A-pYA">
-    <device id="retina4_7" orientation="landscape">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Sk0-7A-pYA">
+    <device id="ipad10_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,25 +18,25 @@
                         <viewControllerLayoutGuide type="bottom" id="ISl-Sw-CDm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AvT-PO-zau">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="225-X7-0Ec" customClass="DUXCameraConfigInfoWidget">
-                                <rect key="frame" x="441" y="50" width="200" height="30"/>
+                                <rect key="frame" x="441" y="70" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="6Vs-8y-fgp"/>
                                     <constraint firstAttribute="width" constant="200" id="MmV-sA-jcv"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWd-ts-Z40" customClass="DUXCameraConfigStorageWidget">
-                                <rect key="frame" x="651" y="50" width="293" height="30"/>
+                                <rect key="frame" x="651" y="70" width="293.5" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="FYS-0Y-2Tb"/>
                                     <constraint firstAttribute="width" constant="293.5" placeholder="YES" id="bUH-Uu-mY4"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsM-c0-gPw">
-                                <rect key="frame" x="20" y="50" width="30" height="30"/>
+                                <rect key="frame" x="20" y="70" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="Hux-KG-pdc"/>
                                     <constraint firstAttribute="width" secondItem="wsM-c0-gPw" secondAttribute="height" multiplier="1:1" id="gN5-Ux-S4p"/>
@@ -49,6 +47,10 @@
                                     <action selector="onBackButtonClicked:" destination="Sk0-7A-pYA" eventType="touchUpInside" id="4an-4D-zaG"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBD-Af-r3g">
+                                <rect key="frame" x="918" y="149" width="194" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.076183750179999996" green="0.077627680690000006" blue="0.077963082899999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -56,17 +58,21 @@
                             <constraint firstAttribute="leadingMargin" secondItem="wsM-c0-gPw" secondAttribute="leading" id="Bao-TK-Cn8"/>
                             <constraint firstItem="wsM-c0-gPw" firstAttribute="top" secondItem="Xdk-bb-Tnp" secondAttribute="bottom" constant="50" id="G2h-6l-NSY"/>
                             <constraint firstItem="225-X7-0Ec" firstAttribute="top" secondItem="Xdk-bb-Tnp" secondAttribute="bottom" constant="50" id="LJf-oC-Guj"/>
+                            <constraint firstItem="ISl-Sw-CDm" firstAttribute="top" secondItem="gBD-Af-r3g" secondAttribute="bottom" constant="557" id="fSt-Mc-LLx"/>
+                            <constraint firstAttribute="trailing" secondItem="gBD-Af-r3g" secondAttribute="trailing" id="hHQ-To-pvy"/>
                             <constraint firstItem="HWd-ts-Z40" firstAttribute="bottom" secondItem="225-X7-0Ec" secondAttribute="bottom" id="hXG-FR-t7l"/>
                             <constraint firstItem="225-X7-0Ec" firstAttribute="leading" secondItem="AvT-PO-zau" secondAttribute="leading" constant="441" id="kxC-cn-PUx"/>
                             <constraint firstItem="wsM-c0-gPw" firstAttribute="width" secondItem="wsM-c0-gPw" secondAttribute="height" multiplier="1:1" id="pU2-1B-cXE"/>
                             <constraint firstItem="HWd-ts-Z40" firstAttribute="leading" secondItem="225-X7-0Ec" secondAttribute="trailing" constant="10" id="rWs-pM-aNX"/>
                             <constraint firstItem="wsM-c0-gPw" firstAttribute="width" secondItem="wsM-c0-gPw" secondAttribute="height" multiplier="1:1" id="sTs-nd-fGm"/>
+                            <constraint firstItem="gBD-Af-r3g" firstAttribute="top" secondItem="HWd-ts-Z40" secondAttribute="bottom" constant="49" id="uuw-Wc-inB"/>
+                            <constraint firstItem="gBD-Af-r3g" firstAttribute="leading" secondItem="AvT-PO-zau" secondAttribute="leading" constant="918" id="x3X-h3-quu"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lma-EJ-oub" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54" y="-144"/>
+            <point key="canvasLocation" x="53.956834532374103" y="-144.60431654676259"/>
         </scene>
     </scenes>
 </document>
