@@ -56,6 +56,8 @@
     
     [self registerWithProduct];
     
+    
+    
 }
 
 - (IBAction)connectButton:(id)sender {

@@ -24,6 +24,7 @@
 		A154C491216C1CD6003B0053 /* MOSSection.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C486216C1CD6003B0053 /* MOSSection.m */; };
 		A154C492216C1CD6003B0053 /* MOSProductCommunicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C489216C1CD6003B0053 /* MOSProductCommunicationManager.m */; };
 		A154C499216C1D67003B0053 /* ColorSuporte.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C495216C1D67003B0053 /* ColorSuporte.m */; };
+		A1C4B158219332B300A57AC3 /* Botao.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C4B157219332B300A57AC3 /* Botao.m */; };
 		ACFBF812207C24250058A720 /* WidgetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFBF7FC207C24250058A720 /* WidgetsViewController.m */; };
 		ACFBF813207C24250058A720 /* MyBatteryWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFBF7FF207C24250058A720 /* MyBatteryWidget.m */; };
 		ACFBF814207C24250058A720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACFBF801207C24250058A720 /* Assets.xcassets */; };
@@ -84,6 +85,8 @@
 		A154C495216C1D67003B0053 /* ColorSuporte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSuporte.m; sourceTree = "<group>"; };
 		A154C496216C1D67003B0053 /* ColorSuporte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSuporte.h; sourceTree = "<group>"; };
 		A154C498216C1D67003B0053 /* StatusProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusProtocol.h; sourceTree = "<group>"; };
+		A1C4B156219332B300A57AC3 /* Botao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Botao.h; sourceTree = "<group>"; };
+		A1C4B157219332B300A57AC3 /* Botao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Botao.m; sourceTree = "<group>"; };
 		A4A189081EA1291E00D06BF0 /* UXSDKOCSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UXSDKOCSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFBF7FC207C24250058A720 /* WidgetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WidgetsViewController.m; sourceTree = "<group>"; };
 		ACFBF7FD207C24250058A720 /* DefaultLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultLayoutViewController.h; sourceTree = "<group>"; };
@@ -263,6 +266,8 @@
 				ACFBF7FF207C24250058A720 /* MyBatteryWidget.m */,
 				ACFBF810207C24250058A720 /* Info.plist */,
 				ACFBF811207C24250058A720 /* Widgets.storyboard */,
+				A1C4B156219332B300A57AC3 /* Botao.h */,
+				A1C4B157219332B300A57AC3 /* Botao.m */,
 			);
 			path = UXSDKOCSample;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 				A154C490216C1CD6003B0053 /* MOSAction.m in Sources */,
 				ACFBF81D207C24250058A720 /* PanelsCollectionsViewController.m in Sources */,
 				A154C473216C1CA8003B0053 /* MOSJSONDynamicController.m in Sources */,
+				A1C4B158219332B300A57AC3 /* Botao.m in Sources */,
 				A154C48B216C1CD6003B0053 /* ButtonOff.m in Sources */,
 				A154C492216C1CD6003B0053 /* MOSProductCommunicationManager.m in Sources */,
 			);
