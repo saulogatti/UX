@@ -180,9 +180,9 @@
 		A154C47A216C1CD6003B0053 /* Botao */ = {
 			isa = PBXGroup;
 			children = (
-				A154C47B216C1CD6003B0053 /* ButtonOn.h */,
 				A154C47C216C1CD6003B0053 /* ButtonOff.m */,
 				A154C47D216C1CD6003B0053 /* ButtonOff.h */,
+				A154C47B216C1CD6003B0053 /* ButtonOn.h */,
 				A154C47E216C1CD6003B0053 /* ButtonOn.m */,
 			);
 			path = Botao;

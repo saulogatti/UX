@@ -20,6 +20,26 @@
     [super viewDidLoad];
     
     self.appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSArray *allSections = [self.appDelegate.model jsonSections];
+    NSUInteger index = 0;
+    
+    for (index = 0; index < allSections.count; index++)
+    {
+        MOSSection *section = allSections[index];
+        MOSJSONDynamicController *newController = [[MOSJSONDynamicController alloc] initWithStyle:UITableViewStylePlain];
+        newController.section = section;
+        self.section = section;
+//
+//        if (selectedViewController == nil) {
+//            selectedViewController = newController;
+//        }
+        
+        newController.tabBarItem = [[UITabBarItem alloc] initWithTitle:section.name
+                                                                 image:[UIImage imageNamed:@"first"]
+                                                                   tag:index];
+        newController.title = section.name;
+//        [viewControllers addObject:newController];
+    }
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
