@@ -48,10 +48,10 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"MOSDynamicTableViewCell"
                                               bundle:[NSBundle mainBundle]]
          forCellReuseIdentifier:@"action"];
-    self.tableView.estimatedRowHeight = 40;
-
-    UIEdgeInsets currentEdgeInset = self.tableView.contentInset;
-    self.tableView.contentInset = UIEdgeInsetsMake(20, currentEdgeInset.left, 50, currentEdgeInset.right);
+//    self.tableView.estimatedRowHeight = 40;
+//
+//    UIEdgeInsets currentEdgeInset = self.tableView.contentInset;
+//    self.tableView.contentInset = UIEdgeInsetsMake(20, currentEdgeInset.left, 50, currentEdgeInset.right);
     
     _delegateUsuario = self;
 }
@@ -66,6 +66,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     

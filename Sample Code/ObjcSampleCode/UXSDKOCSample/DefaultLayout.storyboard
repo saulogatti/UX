@@ -48,7 +48,10 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y8D-lK-Npn">
-                                <rect key="frame" x="751" y="121" width="273" height="424"/>
+                                <rect key="frame" x="664" y="121" width="360" height="424"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="9U1-Bi-s5E"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="jis-ac-szE" kind="embed" id="TGM-UA-FrR"/>
                                 </connections>
@@ -61,7 +64,6 @@
                             <constraint firstItem="Y8D-lK-Npn" firstAttribute="top" secondItem="HWd-ts-Z40" secondAttribute="bottom" constant="21" id="9CB-LA-5be"/>
                             <constraint firstAttribute="leadingMargin" secondItem="wsM-c0-gPw" secondAttribute="leading" id="Bao-TK-Cn8"/>
                             <constraint firstItem="wsM-c0-gPw" firstAttribute="top" secondItem="Xdk-bb-Tnp" secondAttribute="bottom" constant="50" id="G2h-6l-NSY"/>
-                            <constraint firstItem="Y8D-lK-Npn" firstAttribute="leading" secondItem="AvT-PO-zau" secondAttribute="leading" constant="751" id="HEC-vo-ogg"/>
                             <constraint firstItem="225-X7-0Ec" firstAttribute="top" secondItem="Xdk-bb-Tnp" secondAttribute="bottom" constant="50" id="LJf-oC-Guj"/>
                             <constraint firstAttribute="trailing" secondItem="Y8D-lK-Npn" secondAttribute="trailing" id="MzH-Br-96h"/>
                             <constraint firstItem="HWd-ts-Z40" firstAttribute="bottom" secondItem="225-X7-0Ec" secondAttribute="bottom" id="hXG-FR-t7l"/>
@@ -81,15 +83,15 @@
             <objects>
                 <tableViewController id="jis-ac-szE" customClass="MOSJSONDynamicController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AW4-GV-rZG">
-                        <rect key="frame" x="0.0" y="0.0" width="273" height="424"/>
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="424"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.074576549232006073" green="0.078429631888866425" blue="0.078431688249111176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pfy-bU-LM8">
-                                <rect key="frame" x="0.0" y="28" width="273" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="360" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pfy-bU-LM8" id="0xh-B3-wf9">
-                                    <rect key="frame" x="0.0" y="0.0" width="273" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="360" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
