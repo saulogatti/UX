@@ -8,7 +8,7 @@
 
 #import "DefaultLayoutViewController.h"
 
-@interface DefaultLayoutViewController ()
+@interface DefaultLayoutViewController()<DJISDKManagerDelegate>
 - (IBAction)onBackButtonClicked:(id)sender;
 
 @end
@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+     [self registerWithProduct];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,5 +29,44 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+- (void) connectToProduct
+{
+  
+    NSLog(@"Connecting to product...");
+    [DJISDKManager startConnectionToProduct];
+    
+}
 
+- (void) registerWithProduct
+{
+    [DJISDKManager registerAppWithDelegate:self];
+}
+#pragma mark - DJISDKManager Delegate Methods
+- (void)appRegisteredWithError:(NSError *)error
+{
+    if (error == nil) {
+        NSLog(@"Registration Succeeded");
+        [self connectToProduct];
+   
+    } else {
+        NSLog(@"Error Registrating App: %@", error.description);
+    }
+}
+
+- (void)productConnected:(DJIBaseProduct *)product
+{
+    if (product != nil) {
+        NSLog(@"Connection to new product successed!");
+     
+    }
+    
+    //If this demo is used in China, it's required to login to your DJI account to activate the application. Also you need to use DJI Go app to bind the aircraft to your DJI account. For more details, please check this demo's tutorial.
+}
+
+- (void)productDisconnected{
+    
+    NSLog(@"Disconnected from product!");
+  
+    
+}
 @end
