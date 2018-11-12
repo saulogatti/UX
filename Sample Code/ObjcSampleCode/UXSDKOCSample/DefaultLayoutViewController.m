@@ -39,6 +39,7 @@
 
 - (void) registerWithProduct
 {
+     NSString *registrationAppKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:SDK_APP_KEY_INFO_PLIST_KEY];
     [DJISDKManager registerAppWithDelegate:self];
 }
 #pragma mark - DJISDKManager Delegate Methods
