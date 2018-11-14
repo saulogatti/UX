@@ -33,14 +33,14 @@
 {
   
     NSLog(@"Connecting to product...");
-    [DJISDKManager startConnectionToProduct];
+//    [DJISDKManager startConnectionToProduct];
     
 }
 
 - (void) registerWithProduct
 {
-     NSString *registrationAppKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:SDK_APP_KEY_INFO_PLIST_KEY];
-    [DJISDKManager registerAppWithDelegate:self];
+     
+//    [DJISDKManager registerAppWithDelegate:self];
 }
 #pragma mark - DJISDKManager Delegate Methods
 - (void)appRegisteredWithError:(NSError *)error
