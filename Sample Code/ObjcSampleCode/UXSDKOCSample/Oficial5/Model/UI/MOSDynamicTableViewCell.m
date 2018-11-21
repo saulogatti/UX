@@ -99,7 +99,7 @@
         [self invertColorBotaoOff];
     });
     if (self.goAction) {
-        NSNumber *cmdId =  self.actionModel.cmdIDOn;
+        NSNumber *cmdId =  self.actionModel.cmdIDOff;
         NSArray *arguments = @[];
         
         self.goAction(cmdId, arguments);
@@ -116,7 +116,7 @@
         [self invertColors];
     });
     if (self.goAction) {
-        NSNumber *cmdId =  self.actionModel.cmdIDOff;
+        NSNumber *cmdId =  self.actionModel.cmdIDOn;
         NSArray *arguments = @[];
         
         self.goAction(cmdId, arguments);
@@ -141,7 +141,7 @@
     
 }
 
--(void)changeStatus:(BOOL *) value {
+-(void)changeStatus:(BOOL) value {
     if(value){
         [self carregarOFF];
     }else{

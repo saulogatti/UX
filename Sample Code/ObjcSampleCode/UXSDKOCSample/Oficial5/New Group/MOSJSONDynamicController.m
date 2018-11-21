@@ -29,16 +29,16 @@
         MOSJSONDynamicController *newController = [[MOSJSONDynamicController alloc] initWithStyle:UITableViewStylePlain];
         newController.section = section;
         self.section = section;
-//
-//        if (selectedViewController == nil) {
-//            selectedViewController = newController;
-//        }
+        //
+        //        if (selectedViewController == nil) {
+        //            selectedViewController = newController;
+        //        }
         
         newController.tabBarItem = [[UITabBarItem alloc] initWithTitle:section.name
                                                                  image:[UIImage imageNamed:@"first"]
                                                                    tag:index];
         newController.title = section.name;
-//        [viewControllers addObject:newController];
+        //        [viewControllers addObject:newController];
     }
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -46,12 +46,12 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self.tableView registerNib:[UINib nibWithNibName:@"MOSDynamicTableViewCell"
-                                              bundle:[NSBundle mainBundle]]
+                                               bundle:[NSBundle mainBundle]]
          forCellReuseIdentifier:@"action"];
-//    self.tableView.estimatedRowHeight = 40;
-//
-//    UIEdgeInsets currentEdgeInset = self.tableView.contentInset;
-//    self.tableView.contentInset = UIEdgeInsetsMake(20, currentEdgeInset.left, 50, currentEdgeInset.right);
+    //    self.tableView.estimatedRowHeight = 40;
+    //
+    //    UIEdgeInsets currentEdgeInset = self.tableView.contentInset;
+    //    self.tableView.contentInset = UIEdgeInsetsMake(20, currentEdgeInset.left, 50, currentEdgeInset.right);
     
     _delegateUsuario = self;
 }
@@ -77,16 +77,16 @@
 {
     MOSDynamicTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"action" forIndexPath:indexPath];
     MOSAction *action = self.section.actions[indexPath.row];
-
+    
     [cell populateWithActionModel:action];
     
-    __weak MOSDynamicTableViewCell *weakCell = cell;
+    MOSDynamicTableViewCell *weakCell = cell;
     cell.goAction = ^(NSNumber *cmdId, NSArray *arguments) {
-      
+        
         // Arguments are not supported yet.
         u_int16_t cmdIdUInt = [cmdId unsignedIntValue];
         NSData *data = [NSData dataWithBytes:&cmdIdUInt length:sizeof(u_int16_t)];
-
+        
         [self.appDelegate.model addLog:[NSString stringWithFormat:@"Sending CmdID %@ with %ld Arguments", cmdId, (unsigned long)arguments.count]];
         weakCell.commandResultLabel.text = @"Sending...";
         [self.appDelegate.productCommunicationManager sendData:data
@@ -113,7 +113,7 @@
                                                                break;
                                                            case ValvulaDoisAberta:
                                                                resposta = @"Válvula 2 aberta";
-                                                                status = true;
+                                                               status = true;
                                                                break;
                                                            case ValvulaDoisFechada:
                                                                resposta = @"Válvula 2 fechada";
@@ -121,7 +121,7 @@
                                                                break;
                                                            case ValvulaTresAberta:
                                                                resposta = @"Válvula 3 aberta";
-                                                                status = true;
+                                                               status = true;
                                                                break;
                                                            case ValvulaTresFechada:
                                                                resposta = @"Válvula 3 fechada";
@@ -129,7 +129,7 @@
                                                                break;
                                                            case ValvulaQuatroAberta:
                                                                resposta = @"Válvula 4 aberta";
-                                                                status = true;
+                                                               status = true;
                                                                break;
                                                            case ValvulaQuatroFechada:
                                                                resposta = @"Válvula 4 fechada";
@@ -137,11 +137,11 @@
                                                                break;
                                                            case ValvulaCincoAberta:
                                                                resposta = @"Válvula 5 aberta";
-                                                                status = true;
+                                                               status = true;
                                                                break;
                                                            case ValvulaCincoFechada:
                                                                resposta = @"Válvula 1 fechada";
-                                                                status = false;
+                                                               status = false;
                                                                break;
                                                            default:
                                                                resposta = @"Resposta não identificada";
@@ -158,15 +158,15 @@
                                                            weakCell.commandResultLabel.text = responseMessage;
                                                            
                                                            if (status) {
-                                                               [_delegateUsuario changeStatus:YES];
+                                                               [self->_delegateUsuario changeStatus:YES];
                                                            }else{
-                                                                [_delegateUsuario changeStatus:NO];
+                                                               [self->_delegateUsuario changeStatus:NO];
                                                            }
-                                                    
+                                                           
                                                        });
                                                    }];
     };
-
+    
     return cell;
 }
 

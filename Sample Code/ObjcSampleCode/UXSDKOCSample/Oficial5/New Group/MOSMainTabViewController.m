@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-
+    
     NSMutableArray *viewControllers = [NSMutableArray new];
     MOSJSONDynamicController *selectedViewController = nil;
     NSArray *allSections = [self.appDelegate.model jsonSections];
@@ -43,7 +43,7 @@
         newController.title = section.name;
         [viewControllers addObject:newController];
     }
-
+    
     // Adding the log view
     MOSLogConsoleViewController *logVC = [[MOSLogConsoleViewController alloc] initWithNibName:@"MOSLogConsoleViewController" bundle:[NSBundle mainBundle]];
     logVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Logs"
@@ -65,13 +65,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

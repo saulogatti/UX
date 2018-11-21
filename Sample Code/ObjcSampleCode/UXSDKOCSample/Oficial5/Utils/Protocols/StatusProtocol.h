@@ -13,6 +13,6 @@
 
 
 @optional
-- (void) changeStatus:(BOOL*) status;
+- (void) changeStatus:(BOOL) status;
 
 @end
