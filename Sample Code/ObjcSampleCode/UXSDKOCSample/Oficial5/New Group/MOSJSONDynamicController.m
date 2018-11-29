@@ -53,7 +53,7 @@
     //    UIEdgeInsets currentEdgeInset = self.tableView.contentInset;
     //    self.tableView.contentInset = UIEdgeInsetsMake(20, currentEdgeInset.left, 50, currentEdgeInset.right);
     
-    _delegateUsuario = self;
+    _delegateProtocolo = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -158,9 +158,9 @@
                                                            weakCell.commandResultLabel.text = responseMessage;
                                                            
                                                            if (status) {
-                                                               [self->_delegateUsuario changeStatus:YES];
+                                                               [self->_delegateProtocolo changeStatus:YES];
                                                            }else{
-                                                               [self->_delegateUsuario changeStatus:NO];
+                                                               [self->_delegateProtocolo changeStatus:NO];
                                                            }
                                                            
                                                        });

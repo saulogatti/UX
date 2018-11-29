@@ -12,7 +12,7 @@
 #import "StatusProtocol.h"
 
 @interface MOSJSONDynamicController : UITableViewController<IStatusProtocolDelegate>{
-   __weak NSObject<IStatusProtocolDelegate> * _delegateUsuario;
+   __weak NSObject<IStatusProtocolDelegate> * _delegateProtocolo;
 }
 
 @property (weak, nonatomic) AppDelegate *appDelegate;

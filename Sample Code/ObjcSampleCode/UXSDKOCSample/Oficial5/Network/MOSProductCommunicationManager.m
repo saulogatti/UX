@@ -78,13 +78,17 @@
     [[fc onboardSDKDevice] sendDataFromMobileToOnboard:data
                                         withCompletion:^(NSError * _Nullable error) {
                                             if (error) {
-                                                    // Handle error locally
+                                                // Handle error locally
                                             } else {
-                                                NSString *key = [self commandIDStringKeyFromData:data];
-                                                
-                                                [self.sentCmds setObject:ackBlock forKey:key];
+                                                if (ackBlock != NULL) {
+                                                    NSString *key = [self commandIDStringKeyFromData:data];
+                                                    
+                                                    [self.sentCmds setObject:ackBlock forKey:key];
+                                                }
                                             }
-                                            completion(error);
+                                            if (completion != NULL) {
+                                                completion(error);
+                                            }
                                         }];
 }
 
