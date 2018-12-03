@@ -25,8 +25,7 @@
         [self carregarBotao];
         [self carregarOFF];
         [self carregarBotaoOff];
-        
-       
+
     });
     
 }
@@ -60,7 +59,7 @@
     });
 }
 
-- (void) invertColors{
+- (void) invertColors {
     [self.btOn setBackgroundColor:[UIColor whiteColor]];
     self.btOn.layer.borderColor = [ColorSuporte ColorDefaultButtonOn].CGColor;
     self.btOn.layer.borderWidth = 1.0;
@@ -69,17 +68,16 @@
     [self.btOn setTitleColor:[ColorSuporte ColorDefaultButtonOn] forState:UIControlStateNormal];
 }
 
-
--(void)carregarOFF{
+-(void)carregarOFF {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.lbStatus setBackgroundColor:[ColorSuporte ColorDefaultButtonOn]];
+        [self.lbStatus setBackgroundColor:[ColorSuporte ColorDefaultButtonOff]];
         [self.lbStatus setTextColor:[UIColor whiteColor]];
         
         [self.lbStatus setText:@"OFF"];
     });
 }
 
--(void)carregarON{
+-(void)carregarON {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.lbStatus setBackgroundColor:[ColorSuporte ColorDefaultButtonOn]];
         [self.lbStatus setTextColor:[UIColor whiteColor]];
@@ -87,13 +85,11 @@
     });
 }
 
-
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     
-    // Configure the view for the selected state
 }
+
 - (IBAction)off:(id)sender {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self invertColorBotaoOff];
@@ -143,9 +139,9 @@
 
 -(void)changeStatus:(BOOL) value {
     if(value){
-        [self carregarOFF];
-    }else{
         [self carregarON];
+    }else{
+        [self carregarOFF];
     }
 }
 

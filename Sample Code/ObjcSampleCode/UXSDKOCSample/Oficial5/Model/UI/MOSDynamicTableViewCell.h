@@ -7,19 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "StatusProtocol.h"
-@protocol ChangeStatusProtocolDelegate <NSObject>
 
 
-@optional
-- (void) changeStatus:(BOOL) status;
-
-@end
 @class MOSAction;
 
 typedef void (^MOSGoActionBlock)(NSNumber *cmdId, NSArray *arguments);
 
-@interface MOSDynamicTableViewCell : UITableViewCell<IStatusProtocolDelegate>
+@interface MOSDynamicTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *commandLabel;
 @property (weak, nonatomic) IBOutlet UILabel *commandInformation;
@@ -36,5 +30,5 @@ typedef void (^MOSGoActionBlock)(NSNumber *cmdId, NSArray *arguments);
 
 
 - (void)populateWithActionModel:(MOSAction *)actionModel;
-
+-(void)changeStatus:(BOOL) value;
 @end
