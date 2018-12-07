@@ -155,6 +155,12 @@
                                                        
                                                        dispatch_time_t delay = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 2.0);
                                                        dispatch_after(delay, dispatch_get_main_queue(), ^(void){
+                                                           UIAlertController * alera = [UIAlertController alertControllerWithTitle:@"DEBUG" message:[NSString stringWithFormat:@"Resposta %@", responseMessage] preferredStyle:UIAlertControllerStyleAlert];
+                                                           UIAlertAction * acso = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                                                               
+                                                           }];
+                                                           [alera addAction:acso];
+                                                           [self showViewController:alera sender:nil];
                                                            weakCell.commandResultLabel.text = responseMessage;
                                                            
                                                            [weakCell changeStatus:status];
