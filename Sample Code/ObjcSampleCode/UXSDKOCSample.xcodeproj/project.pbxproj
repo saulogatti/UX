@@ -196,8 +196,8 @@
 		A154C488216C1CD6003B0053 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				A154C489216C1CD6003B0053 /* MOSProductCommunicationManager.m */,
 				A154C48A216C1CD6003B0053 /* MOSProductCommunicationManager.h */,
+				A154C489216C1CD6003B0053 /* MOSProductCommunicationManager.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";

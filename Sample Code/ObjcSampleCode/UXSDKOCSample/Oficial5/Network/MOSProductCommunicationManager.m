@@ -75,6 +75,11 @@
 //        }
 //        completion(error);
 //    }];
+    if (_timerRetry != nil && [_timerRetry isValid]) {
+        [_timerRetry invalidate];
+    }
+    _timerRetry = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(retry) userInfo:nil repeats:NO];
+    _dataRetry = data;
     [[fc onboardSDKDevice] sendDataFromMobileToOnboard:data
                                         withCompletion:^(NSError * _Nullable error) {
                                             if (error) {
@@ -91,13 +96,18 @@
                                             }
                                         }];
 }
-
+- (void) retry {
+    DJIAircraft *aircraft = (DJIAircraft *)DJISDKManager.product;
+    DJIFlightController *fc = aircraft.flightController;
+    [[fc onboardSDKDevice] sendDataFromMobileToOnboard:_dataRetry withCompletion:nil];
+}
 /*********************************************************************************/
 #pragma mark - DJIFlightControllerDelegate
 /*********************************************************************************/
 
 - (void)flightController:(DJIFlightController *_Nonnull)fc didReceiveDataFromOnboardSDKDevice:(NSData * _Nonnull)data
 {
+    [_timerRetry invalidate];
     NSString *key = [self commandIDStringKeyFromData:data];
     MOSAckBlock ackBlock = [self.sentCmds objectForKey:key];
     

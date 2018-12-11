@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void (^MOSAckBlock)(NSData *data, NSError * _Nullable error);
 
 @interface MOSProductCommunicationManager : NSObject <DJISDKManagerDelegate, DJIFlightControllerDelegate>
+{
+    NSTimer * _timerRetry;
+    NSData * _dataRetry;
+}
 
 @property (weak, nonatomic) AppDelegate *appDelegate;
 @property (weak, nonatomic) DJIBaseProduct *connectedProduct;
