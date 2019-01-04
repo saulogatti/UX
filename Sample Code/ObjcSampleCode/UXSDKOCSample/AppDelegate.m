@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MOSModel.h"
 #import "MOSProductCommunicationManager.h"
+#import "Suporte.h"
 @interface AppDelegate ()
 
 @end
@@ -40,12 +41,24 @@
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+   
+//    UIPopoverController * popover = [[UIPopoverController alloc] initWithContentViewController:vc];
+//
+//    [popover presentPopoverFromRect:[Suporte getTopMostViewController].view.bounds inView:[Suporte getTopMostViewController].view permittedArrowDirections:0 animated:YES];
+    
 }
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    UIStoryboard * sto = [UIStoryboard storyboardWithName:@"ConfigTimer" bundle:nil];
+    UIViewController * vc = sto.instantiateInitialViewController;
+    vc.modalPresentationStyle = UIModalPresentationPopover;
+    vc.popoverPresentationController.sourceView = [Suporte getTopMostViewController].view;
+    
+    vc.popoverPresentationController.permittedArrowDirections = 0;
+    vc.popoverPresentationController.sourceRect = CGRectMake(CGRectGetMidX([Suporte getTopMostViewController].view.bounds), CGRectGetMidY([Suporte getTopMostViewController].view.bounds),0,0);
+    [[Suporte getTopMostViewController] presentViewController:vc animated:YES completion:nil];
 }
 
 

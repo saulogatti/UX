@@ -9,11 +9,16 @@
 #import "CronometroViewController.h"
 #import "AppDelegate.h"
 #import "MOSProductCommunicationManager.h"
+#import "Suporte.h"
+#import "TimerCommand.h"
+
 @interface CronometroViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *labelContador;
 @property (weak, nonatomic) IBOutlet UIButton *botaoInicia;
-@property (nonatomic, assign) int tempoTimer;
+@property (nonatomic, assign) NSInteger tempoTimer;
+@property (nonatomic, assign) NSInteger tempoTimerOff;
 @property (nonatomic, strong) NSTimer * timer;
+@property (nonatomic, assign) NSInteger valve;
 @end
 
 @implementation CronometroViewController
@@ -36,29 +41,32 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (IBAction)acaoBotaoMias:(id)sender {
-    _tempoTimer++;
-    [self atualizarLabel];
-}
+
 - (IBAction)acaoBotaoMenos:(id)sender {
-    _tempoTimer--;
-    [self atualizarLabel];
+    
 }
 
 - (void) atualizarLabel {
     _labelContador.text = [self timeFormatted:_tempoTimer];
     
 }
-- (NSString *)timeFormatted:(int)totalSeconds
+- (NSString *)timeFormatted:(NSInteger)totalSeconds
 {
     
     int seconds = totalSeconds % 60;
     int minutes = (totalSeconds / 60) % 60;
-    int hours = totalSeconds / 3600;
+//    int hours = totalSeconds / 3600;
     
-    return [NSString stringWithFormat:@"%02d:%02d:%02d",hours, minutes, seconds];
+    return [NSString stringWithFormat:@"%02d:%02d", minutes, seconds];
 }
 - (IBAction)acaoBotaInicia:(id)sender {
+    _valve = 1;
+    NSMutableDictionary * dic = [[Suporte getInstancia] listTimer];
+    TimerCommand * tim = [dic objectForKey:[NSNumber numberWithInteger:_valve]];
+    if (tim != nil) {
+        _tempoTimer = tim.timeOn;
+        tim.executeOn = YES;
+    }
     if (_timer == nil) {
         _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(executaTimer) userInfo:nil repeats:YES];
         [[self botaoInicia] setTitle:@"Parar" forState:UIControlStateNormal];

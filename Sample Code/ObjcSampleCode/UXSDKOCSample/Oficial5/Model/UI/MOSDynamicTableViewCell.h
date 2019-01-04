@@ -22,13 +22,18 @@ typedef void (^MOSGoActionBlock)(NSNumber *cmdId, NSArray *arguments);
 @property (weak, nonatomic) IBOutlet UIButton *btOff;
 @property (weak, nonatomic) IBOutlet UIButton *btOn;
 @property (weak, nonatomic) IBOutlet UILabel *lbStatus;
+@property (nonatomic, assign) NSInteger timerCommandOff;
+@property (nonatomic, assign) NSInteger timerCommandOn;
 
 
 @property (strong, nonatomic) MOSGoActionBlock goAction;
+
 
 - (IBAction)go:(id)sender;
 
 
 - (void)populateWithActionModel:(MOSAction *)actionModel;
 -(void)changeStatus:(BOOL) value;
+- (void) executeTimer;
+- (void) pause;
 @end

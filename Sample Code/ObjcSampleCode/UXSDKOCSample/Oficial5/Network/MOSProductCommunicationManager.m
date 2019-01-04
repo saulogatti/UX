@@ -78,13 +78,14 @@
     if (_timerRetry != nil && [_timerRetry isValid]) {
         [_timerRetry invalidate];
     }
-    _timerRetry = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(retry) userInfo:nil repeats:NO];
-    _dataRetry = data;
+
     [[fc onboardSDKDevice] sendDataFromMobileToOnboard:data
                                         withCompletion:^(NSError * _Nullable error) {
                                             if (error) {
                                                 // Handle error locally
                                             } else {
+                                                self->_timerRetry = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(retry) userInfo:nil repeats:NO];
+                                                self->_dataRetry = data;
                                                 if (ackBlock != NULL) {
                                                     NSString *key = [self commandIDStringKeyFromData:data];
                                                     

@@ -12,13 +12,17 @@
 #import "MOSDynamicTableViewCell.h"
 #import "MOSProductCommunicationManager.h"
 #import "Enum.h"
+#import "TimerCommand.h"
+#import "Suporte.h"
 
 
 @implementation MOSJSONDynamicController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateScreen) name:@"UpdateScreen" object:nil];
+  
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resume) name:@"Resume" object:nil];
     self.appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSArray *allSections = [self.appDelegate.model jsonSections];
     NSUInteger index = 0;
@@ -55,7 +59,15 @@
     
     
 }
-
+- (void)updateScreen {
+    NSInteger valor = [Suporte getInstancia].valveExecute;
+    valor++;
+    [[Suporte getInstancia] setValveExecute:valor];
+    [[self tableView] reloadData];
+}
+- (void) resume {
+    [[self tableView] reloadData];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -79,8 +91,37 @@
     MOSAction *action = self.section.actions[indexPath.row];
     
     [cell populateWithActionModel:action];
-    
+    TimerCommand * tim = nil;
+    if ([action.key isEqualToString:@"openValveOne"]) {
+        tim = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInteger:1]];
+    } else  if ([action.key isEqualToString:@"openValveTwo"]) {
+        tim = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInteger:2]];
+        
+    } else  if ([action.key isEqualToString:@"openValveThree"]) {
+        tim = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInteger:3]];
+        
+    } else  if ([action.key isEqualToString:@"openValveFour"]) {
+        tim = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInteger:4]];
+        
+    } else  if ([action.key isEqualToString:@"openValveFive"]) {
+        tim = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInteger:5]];
+        
+    } else {
+        [cell setTimerCommandOff:-1];
+        [cell setTimerCommandOn:-1];
+    }
+    if (tim != nil) {
+        [cell setTimerCommandOn:tim.timeOn];
+        [cell setTimerCommandOff:tim.timeOff];
+    }
+    NSLog(@"Executar valve %ld", (long)[Suporte getInstancia].valveExecute);
+    if ([[Suporte getInstancia] valveExecute] == tim.valve) {
+        [cell executeTimer];
+    } else {
+        [cell pause];
+    }
     MOSDynamicTableViewCell *weakCell = cell;
+    
     cell.goAction = ^(NSNumber *cmdId, NSArray *arguments) {
         
         // Arguments are not supported yet.

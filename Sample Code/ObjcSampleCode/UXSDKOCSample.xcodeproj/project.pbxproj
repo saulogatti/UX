@@ -24,6 +24,10 @@
 		A154C491216C1CD6003B0053 /* MOSSection.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C486216C1CD6003B0053 /* MOSSection.m */; };
 		A154C492216C1CD6003B0053 /* MOSProductCommunicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C489216C1CD6003B0053 /* MOSProductCommunicationManager.m */; };
 		A154C499216C1D67003B0053 /* ColorSuporte.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C495216C1D67003B0053 /* ColorSuporte.m */; };
+		A1A74C4921DD37C6001DC408 /* ConfigTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1A74C4821DD37C6001DC408 /* ConfigTimer.storyboard */; };
+		A1A74C4F21DD3A0B001DC408 /* Suporte.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A74C4E21DD3A0B001DC408 /* Suporte.m */; };
+		A1A74C5621DE3A0E001DC408 /* ConfigTimerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A74C5521DE3A0E001DC408 /* ConfigTimerTableViewController.m */; };
+		A1A74C5A21DE3CB2001DC408 /* TimerCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A74C5921DE3CB2001DC408 /* TimerCommand.m */; };
 		A1C4B158219332B300A57AC3 /* Botao.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C4B157219332B300A57AC3 /* Botao.m */; };
 		A1DF4D7C21B0698800C9E826 /* CronometroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DF4D7B21B0698800C9E826 /* CronometroViewController.m */; };
 		ACFBF812207C24250058A720 /* WidgetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFBF7FC207C24250058A720 /* WidgetsViewController.m */; };
@@ -86,6 +90,13 @@
 		A154C495216C1D67003B0053 /* ColorSuporte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSuporte.m; sourceTree = "<group>"; };
 		A154C496216C1D67003B0053 /* ColorSuporte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSuporte.h; sourceTree = "<group>"; };
 		A154C498216C1D67003B0053 /* StatusProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusProtocol.h; sourceTree = "<group>"; };
+		A1A74C4821DD37C6001DC408 /* ConfigTimer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfigTimer.storyboard; sourceTree = "<group>"; };
+		A1A74C4D21DD3A0B001DC408 /* Suporte.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Suporte.h; sourceTree = "<group>"; };
+		A1A74C4E21DD3A0B001DC408 /* Suporte.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Suporte.m; sourceTree = "<group>"; };
+		A1A74C5421DE3A0E001DC408 /* ConfigTimerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigTimerTableViewController.h; sourceTree = "<group>"; };
+		A1A74C5521DE3A0E001DC408 /* ConfigTimerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigTimerTableViewController.m; sourceTree = "<group>"; };
+		A1A74C5821DE3CB2001DC408 /* TimerCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerCommand.h; sourceTree = "<group>"; };
+		A1A74C5921DE3CB2001DC408 /* TimerCommand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerCommand.m; sourceTree = "<group>"; };
 		A1C4B156219332B300A57AC3 /* Botao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Botao.h; sourceTree = "<group>"; };
 		A1C4B157219332B300A57AC3 /* Botao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Botao.m; sourceTree = "<group>"; };
 		A1DF4D7A21B0698800C9E826 /* CronometroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CronometroViewController.h; sourceTree = "<group>"; };
@@ -143,6 +154,9 @@
 		A154C46B216C1C97003B0053 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A1A74C4821DD37C6001DC408 /* ConfigTimer.storyboard */,
+				A1A74C5421DE3A0E001DC408 /* ConfigTimerTableViewController.h */,
+				A1A74C5521DE3A0E001DC408 /* ConfigTimerTableViewController.m */,
 				A154C471216C1CA8003B0053 /* MOSJSONDynamicController.h */,
 				A154C46C216C1CA7003B0053 /* MOSJSONDynamicController.m */,
 				A154C472216C1CA8003B0053 /* MOSLogConsoleViewController.h */,
@@ -160,6 +174,7 @@
 		A154C478216C1CD6003B0053 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A1A74C5721DE3C9F001DC408 /* Objetos */,
 				A154C479216C1CD6003B0053 /* UI */,
 				A154C482216C1CD6003B0053 /* MOSModel.m */,
 				A154C483216C1CD6003B0053 /* MOSSection.h */,
@@ -189,6 +204,8 @@
 				A154C47D216C1CD6003B0053 /* ButtonOff.h */,
 				A154C47B216C1CD6003B0053 /* ButtonOn.h */,
 				A154C47E216C1CD6003B0053 /* ButtonOn.m */,
+				A1C4B156219332B300A57AC3 /* Botao.h */,
+				A1C4B157219332B300A57AC3 /* Botao.m */,
 			);
 			path = Botao;
 			sourceTree = "<group>";
@@ -209,6 +226,8 @@
 				A154C495216C1D67003B0053 /* ColorSuporte.m */,
 				A154C496216C1D67003B0053 /* ColorSuporte.h */,
 				A154C497216C1D67003B0053 /* Protocols */,
+				A1A74C4D21DD3A0B001DC408 /* Suporte.h */,
+				A1A74C4E21DD3A0B001DC408 /* Suporte.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -219,6 +238,15 @@
 				A154C498216C1D67003B0053 /* StatusProtocol.h */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A1A74C5721DE3C9F001DC408 /* Objetos */ = {
+			isa = PBXGroup;
+			children = (
+				A1A74C5821DE3CB2001DC408 /* TimerCommand.h */,
+				A1A74C5921DE3CB2001DC408 /* TimerCommand.m */,
+			);
+			path = Objetos;
 			sourceTree = "<group>";
 		};
 		A4A188FF1EA1291E00D06BF0 = {
@@ -271,8 +299,6 @@
 				ACFBF7FF207C24250058A720 /* MyBatteryWidget.m */,
 				ACFBF810207C24250058A720 /* Info.plist */,
 				ACFBF811207C24250058A720 /* Widgets.storyboard */,
-				A1C4B156219332B300A57AC3 /* Botao.h */,
-				A1C4B157219332B300A57AC3 /* Botao.m */,
 			);
 			path = UXSDKOCSample;
 			sourceTree = "<group>";
@@ -320,6 +346,7 @@
 				TargetAttributes = {
 					A4A189071EA1291E00D06BF0 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -351,6 +378,7 @@
 				A154C45E216C1B03003B0053 /* config.json in Resources */,
 				ACFBF81A207C24250058A720 /* DefaultLayout.storyboard in Resources */,
 				ACFBF816207C24250058A720 /* LaunchScreen.storyboard in Resources */,
+				A1A74C4921DD37C6001DC408 /* ConfigTimer.storyboard in Resources */,
 				A154C462216C1B03003B0053 /* Assets.xcassets in Resources */,
 				A154C48E216C1CD6003B0053 /* MOSDynamicTableViewCell.xib in Resources */,
 				ACFBF817207C24250058A720 /* Main.storyboard in Resources */,
@@ -416,6 +444,8 @@
 				ACFBF81C207C24250058A720 /* DefaultLayoutViewController.m in Sources */,
 				ACFBF813207C24250058A720 /* MyBatteryWidget.m in Sources */,
 				A154C474216C1CA8003B0053 /* MOSLogConsoleViewController.m in Sources */,
+				A1A74C4F21DD3A0B001DC408 /* Suporte.m in Sources */,
+				A1A74C5A21DE3CB2001DC408 /* TimerCommand.m in Sources */,
 				ACFBF81B207C24250058A720 /* AppDelegate.m in Sources */,
 				A154C48C216C1CD6003B0053 /* ButtonOn.m in Sources */,
 				A154C48F216C1CD6003B0053 /* MOSModel.m in Sources */,
@@ -428,6 +458,7 @@
 				A154C490216C1CD6003B0053 /* MOSAction.m in Sources */,
 				ACFBF81D207C24250058A720 /* PanelsCollectionsViewController.m in Sources */,
 				A154C473216C1CA8003B0053 /* MOSJSONDynamicController.m in Sources */,
+				A1A74C5621DE3A0E001DC408 /* ConfigTimerTableViewController.m in Sources */,
 				A1C4B158219332B300A57AC3 /* Botao.m in Sources */,
 				A154C48B216C1CD6003B0053 /* ButtonOff.m in Sources */,
 				A154C492216C1CD6003B0053 /* MOSProductCommunicationManager.m in Sources */,
@@ -569,6 +600,7 @@
 			baseConfigurationReference = F5B19026C9DEFD6AFBB8F77A /* Pods-UXSDKOCSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -581,6 +613,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VOC.Mobile.SEAS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UXSDKOCSample/Oficial5/Utils/UXSDKOCSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -590,6 +625,7 @@
 			baseConfigurationReference = 06EE100A9FE67BED56866C40 /* Pods-UXSDKOCSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -602,6 +638,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VOC.Mobile.SEAS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UXSDKOCSample/Oficial5/Utils/UXSDKOCSample-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

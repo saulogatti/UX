@@ -63,6 +63,7 @@
     if (self.logChangedBlock) {
         self.logChangedBlock();
     }
+    NSLog(@"%@", newLogEntry);
 }
 
 

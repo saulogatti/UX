@@ -13,7 +13,9 @@
 @interface MOSDynamicTableViewCell()
 
 @property (strong, nonatomic) MOSAction *actionModel;
-
+@property (weak, nonatomic) IBOutlet UILabel *textFieldTempo;
+@property (nonatomic, strong) NSTimer * timer;
+@property (weak, nonatomic) IBOutlet UILabel *labelTimerOn;
 @end
 
 @implementation MOSDynamicTableViewCell
@@ -27,7 +29,7 @@
         [self carregarBotaoOff];
 
     });
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pause) name:@"Pause" object:nil];
 }
 
 -(void)carregarBotaoOff{
@@ -123,6 +125,7 @@
                                    userInfo:nil
                                     repeats:NO];
     
+   
     
     
 }
@@ -145,4 +148,71 @@
     }
 }
 
+- (void) updateTimer {
+    if (_timerCommandOn > 0) {
+        _timerCommandOn--;
+        if (_timerCommandOn == 0) {
+            [self go:nil];
+     
+        }
+        [self atualizarLabelOn];
+    } else if (_timerCommandOff > 0) {
+        _timerCommandOff--;
+        if (_timerCommandOff == 0) {
+            [self off:nil];
+         
+        }
+    }
+    
+    if (_timerCommandOn == 0 && _timerCommandOff == 0) {
+        [_timer invalidate];
+        _timer = nil;
+         [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateScreen" object:nil];
+    }
+    
+    [self atualizarLabelOff];
+  
+}
+- (void) atualizarLabelOff {
+    _textFieldTempo.text = [self timeFormatted:_timerCommandOff];
+    
+}
+- (void) atualizarLabelOn {
+     _labelTimerOn.text = [self timeFormatted:_timerCommandOn];
+}
+- (void)setTimerCommandOff:(NSInteger)timerCommandOff {
+    _timerCommandOff = timerCommandOff;
+     [[self textFieldTempo] setHidden:NO];
+    if (_timerCommandOff < 0) {
+        [[self textFieldTempo] setHidden:YES];
+    }
+    [self atualizarLabelOff];
+}
+- (void)setTimerCommandOn:(NSInteger)timerCommandOn {
+    _timerCommandOn = timerCommandOn;
+    [[self labelTimerOn] setHidden:NO];
+    if (_timerCommandOn < 0) {
+        [[self labelTimerOn] setHidden:YES];
+    }
+    [self atualizarLabelOn];
+}
+- (NSString *)timeFormatted:(NSInteger)totalSeconds
+{
+    
+    int seconds = totalSeconds % 60;
+    int minutes = (totalSeconds / 60) % 60;
+//    int hours = totalSeconds / 3600;
+    
+    return [NSString stringWithFormat:@"%02d:%02d", minutes, seconds];
+}
+- (void)executeTimer {
+    if (_timerCommandOn > 0 && _timer == nil) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+    }
+    
+}
+- (void) pause {
+    [_timer invalidate];
+    _timer = nil;
+}
 @end
