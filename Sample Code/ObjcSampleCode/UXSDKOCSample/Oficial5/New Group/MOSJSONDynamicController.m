@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _dicCell = [NSMutableDictionary new];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateScreen) name:@"UpdateScreen" object:nil];
   
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resume) name:@"Resume" object:nil];

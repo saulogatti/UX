@@ -12,6 +12,7 @@
 
 
 @interface MOSJSONDynamicController : UITableViewController {
+    NSMutableDictionary * _dicCell;
    
 }
 

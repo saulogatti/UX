@@ -24,6 +24,7 @@
 		A154C491216C1CD6003B0053 /* MOSSection.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C486216C1CD6003B0053 /* MOSSection.m */; };
 		A154C492216C1CD6003B0053 /* MOSProductCommunicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C489216C1CD6003B0053 /* MOSProductCommunicationManager.m */; };
 		A154C499216C1D67003B0053 /* ColorSuporte.m in Sources */ = {isa = PBXBuildFile; fileRef = A154C495216C1D67003B0053 /* ColorSuporte.m */; };
+		A1907C7421FF592A0044FA17 /* GerenciadorTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A1907C7321FF592A0044FA17 /* GerenciadorTimer.m */; };
 		A1A74C4921DD37C6001DC408 /* ConfigTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1A74C4821DD37C6001DC408 /* ConfigTimer.storyboard */; };
 		A1A74C4F21DD3A0B001DC408 /* Suporte.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A74C4E21DD3A0B001DC408 /* Suporte.m */; };
 		A1A74C5621DE3A0E001DC408 /* ConfigTimerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A74C5521DE3A0E001DC408 /* ConfigTimerTableViewController.m */; };
@@ -90,6 +91,8 @@
 		A154C495216C1D67003B0053 /* ColorSuporte.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSuporte.m; sourceTree = "<group>"; };
 		A154C496216C1D67003B0053 /* ColorSuporte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSuporte.h; sourceTree = "<group>"; };
 		A154C498216C1D67003B0053 /* StatusProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusProtocol.h; sourceTree = "<group>"; };
+		A1907C7221FF592A0044FA17 /* GerenciadorTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GerenciadorTimer.h; sourceTree = "<group>"; };
+		A1907C7321FF592A0044FA17 /* GerenciadorTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GerenciadorTimer.m; sourceTree = "<group>"; };
 		A1A74C4821DD37C6001DC408 /* ConfigTimer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfigTimer.storyboard; sourceTree = "<group>"; };
 		A1A74C4D21DD3A0B001DC408 /* Suporte.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Suporte.h; sourceTree = "<group>"; };
 		A1A74C4E21DD3A0B001DC408 /* Suporte.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Suporte.m; sourceTree = "<group>"; };
@@ -215,6 +218,8 @@
 			children = (
 				A154C48A216C1CD6003B0053 /* MOSProductCommunicationManager.h */,
 				A154C489216C1CD6003B0053 /* MOSProductCommunicationManager.m */,
+				A1907C7221FF592A0044FA17 /* GerenciadorTimer.h */,
+				A1907C7321FF592A0044FA17 /* GerenciadorTimer.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACFBF812207C24250058A720 /* WidgetsViewController.m in Sources */,
+				A1907C7421FF592A0044FA17 /* GerenciadorTimer.m in Sources */,
 				ACFBF818207C24250058A720 /* MainViewController.m in Sources */,
 				ACFBF81C207C24250058A720 /* DefaultLayoutViewController.m in Sources */,
 				ACFBF813207C24250058A720 /* MyBatteryWidget.m in Sources */,

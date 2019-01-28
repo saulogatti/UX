@@ -69,7 +69,7 @@
     }
     if (_timer == nil) {
         _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(executaTimer) userInfo:nil repeats:YES];
-        [[self botaoInicia] setTitle:@"Parar" forState:UIControlStateNormal];
+        
     } else {
         [_timer invalidate];
         _timer = nil;
@@ -82,7 +82,7 @@
     if (_tempoTimer <= 0) {
         [_timer invalidate];
         _timer = nil;
-        [[self botaoInicia] setTitle:@"Inicia" forState:UIControlStateNormal];
+        
         u_int16_t cmdIdUInt = 78;
         NSData *data = [NSData dataWithBytes:&cmdIdUInt length:sizeof(u_int16_t)];
         [[(AppDelegate *)[[UIApplication sharedApplication] delegate]productCommunicationManager] sendData:data withCompletion:^(NSError * _Nullable error) {
@@ -96,6 +96,22 @@
     
     
 }
+- (IBAction)acaoAbrirTimer:(id)sender {
+    UIStoryboard * sto = [UIStoryboard storyboardWithName:@"ConfigTimer" bundle:nil];
+    UIViewController * vc = sto.instantiateInitialViewController;
+    vc.modalPresentationStyle = UIModalPresentationPopover;
+    vc.popoverPresentationController.sourceView = [Suporte getTopMostViewController].view;
+    
+    vc.popoverPresentationController.permittedArrowDirections = 0;
+    vc.popoverPresentationController.sourceRect = CGRectMake(CGRectGetMidX([Suporte getTopMostViewController].view.bounds), CGRectGetMidY([Suporte getTopMostViewController].view.bounds),0,0);
+    [[Suporte getTopMostViewController] presentViewController:vc animated:YES completion:nil];
+}
 
+- (IBAction)acaoRestart:(id)sender {
+}
+- (IBAction)acaoPause:(id)sender {
+}
+- (IBAction)acaoPlay:(id)sender {
+}
 
 @end
