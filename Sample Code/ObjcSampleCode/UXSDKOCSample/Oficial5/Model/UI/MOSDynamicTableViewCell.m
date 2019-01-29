@@ -22,14 +22,15 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    [[self textFieldTempo] setHidden:YES];
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         [self carregarBotao];
         [self carregarOFF];
         [self carregarBotaoOff];
 
     });
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pause) name:@"Pause" object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pause) name:@"Pause" object:nil];
 }
 
 -(void)carregarBotaoOff{
@@ -174,27 +175,27 @@
   
 }
 - (void) atualizarLabelOff {
-    _textFieldTempo.text = [self timeFormatted:_timerCommandOff];
+//    _textFieldTempo.text = [self timeFormatted:_timerCommandOff];
     
 }
 - (void) atualizarLabelOn {
-     _labelTimerOn.text = [self timeFormatted:_timerCommandOn];
+//     _labelTimerOn.text = [self timeFormatted:_timerCommandOn];
 }
 - (void)setTimerCommandOff:(NSInteger)timerCommandOff {
-    _timerCommandOff = timerCommandOff;
-     [[self textFieldTempo] setHidden:NO];
-    if (_timerCommandOff < 0) {
-        [[self textFieldTempo] setHidden:YES];
-    }
-    [self atualizarLabelOff];
+//    _timerCommandOff = timerCommandOff;
+//     [[self textFieldTempo] setHidden:NO];
+//    if (_timerCommandOff < 0) {
+//        [[self textFieldTempo] setHidden:YES];
+//    }
+//    [self atualizarLabelOff];
 }
 - (void)setTimerCommandOn:(NSInteger)timerCommandOn {
-    _timerCommandOn = timerCommandOn;
-    [[self labelTimerOn] setHidden:NO];
-    if (_timerCommandOn < 0) {
-        [[self labelTimerOn] setHidden:YES];
-    }
-    [self atualizarLabelOn];
+//    _timerCommandOn = timerCommandOn;
+//    [[self labelTimerOn] setHidden:NO];
+//    if (_timerCommandOn < 0) {
+//        [[self labelTimerOn] setHidden:YES];
+//    }
+//    [self atualizarLabelOn];
 }
 - (NSString *)timeFormatted:(NSInteger)totalSeconds
 {

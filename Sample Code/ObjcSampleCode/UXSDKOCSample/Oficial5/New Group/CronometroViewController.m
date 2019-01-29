@@ -13,12 +13,14 @@
 #import "TimerCommand.h"
 
 @interface CronometroViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *labelContador;
+
 @property (weak, nonatomic) IBOutlet UIButton *botaoInicia;
 @property (nonatomic, assign) NSInteger tempoTimer;
 @property (nonatomic, assign) NSInteger tempoTimerOff;
 @property (nonatomic, strong) NSTimer * timer;
 @property (nonatomic, assign) NSInteger valve;
+@property (weak, nonatomic) IBOutlet UILabel *labelTempo;
+@property (nonatomic, strong) TimerCommand * timerExecutando;
 @end
 
 @implementation CronometroViewController
@@ -47,7 +49,7 @@
 }
 
 - (void) atualizarLabel {
-    _labelContador.text = [self timeFormatted:_tempoTimer];
+    _labelTempo.text = [self timeFormatted:_tempoTimer];
     
 }
 - (NSString *)timeFormatted:(NSInteger)totalSeconds
@@ -57,16 +59,16 @@
     int minutes = (totalSeconds / 60) % 60;
 //    int hours = totalSeconds / 3600;
     
-    return [NSString stringWithFormat:@"%02d:%02d", minutes, seconds];
+    return [_timerExecutando.description stringByAppendingFormat:@" %02d:%02d", minutes, seconds];
 }
 - (IBAction)acaoBotaInicia:(id)sender {
-    _valve = 1;
-    NSMutableDictionary * dic = [[Suporte getInstancia] listTimer];
-    TimerCommand * tim = [dic objectForKey:[NSNumber numberWithInteger:_valve]];
-    if (tim != nil) {
-        _tempoTimer = tim.timeOn;
-        tim.executeOn = YES;
-    }
+//    _valve = 1;
+//    NSMutableDictionary * dic = [[Suporte getInstancia] listTimer];
+//    TimerCommand * tim = [dic objectForKey:[NSNumber numberWithInteger:_valve]];
+//    if (tim != nil) {
+//        _tempoTimer = tim.timeOn;
+//        tim.executeOn = YES;
+//    }
     if (_timer == nil) {
         _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(executaTimer) userInfo:nil repeats:YES];
         
@@ -83,13 +85,22 @@
         [_timer invalidate];
         _timer = nil;
         
-        u_int16_t cmdIdUInt = 78;
+        u_int16_t cmdIdUInt = _timerExecutando.comando;
         NSData *data = [NSData dataWithBytes:&cmdIdUInt length:sizeof(u_int16_t)];
         [[(AppDelegate *)[[UIApplication sharedApplication] delegate]productCommunicationManager] sendData:data withCompletion:^(NSError * _Nullable error) {
             
         } andAckBlock:^(NSData * _Nonnull data, NSError * _Nullable error) {
             
         }];
+        if (_timerExecutando != nil && _timerExecutando.executeOn && _timerExecutando.timeOff > 0) {
+            _tempoTimer = _timerExecutando.timeOff;
+            _timerExecutando.executeOn = NO;
+            [self acaoBotaInicia:nil];
+        } else {
+            _timerExecutando.executado = YES;
+            
+            [self acaoPlay:nil];
+        }
     }
     
     [self atualizarLabel];
@@ -108,10 +119,38 @@
 }
 
 - (IBAction)acaoRestart:(id)sender {
+        for (int i = 1; i < 6; i++) {
+            TimerCommand * timer = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInt:i]];
+            [timer setExecutado:NO];
+        }
+    _labelTempo.text = @"Reset OK";
 }
 - (IBAction)acaoPause:(id)sender {
+    [_timer invalidate];
 }
 - (IBAction)acaoPlay:(id)sender {
+    if ([[[Suporte getInstancia] listTimer] count] > 0) {
+        for (int i = 1; i < 6; i++) {
+            
+            TimerCommand * timer = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInt:i]];
+            if (timer != nil && (timer.timeOn > 0 || timer.timeOff > 0) && !timer.executado) {
+                if (timer.timeOn > 0) {
+                    _timerExecutando = timer;
+                    timer.executeOn = YES;
+                    _tempoTimer = timer.timeOn;
+                    [self acaoBotaInicia:nil];
+                    break;
+                } else if (timer.timeOff > 0) {
+                    _timerExecutando = timer;
+                    timer.executeOn = NO;
+                    _tempoTimer = timer.timeOff;
+                    [self acaoBotaInicia:nil];
+                    break;
+                }
+                 [self atualizarLabel];
+            }
+        }
+    }
 }
 
 @end

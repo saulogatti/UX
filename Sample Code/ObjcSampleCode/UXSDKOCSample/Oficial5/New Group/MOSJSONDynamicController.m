@@ -92,35 +92,35 @@
     MOSAction *action = self.section.actions[indexPath.row];
     
     [cell populateWithActionModel:action];
-    TimerCommand * tim = nil;
-    if ([action.key isEqualToString:@"openValveOne"]) {
-        tim = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInteger:1]];
-    } else  if ([action.key isEqualToString:@"openValveTwo"]) {
-        tim = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInteger:2]];
-        
-    } else  if ([action.key isEqualToString:@"openValveThree"]) {
-        tim = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInteger:3]];
-        
-    } else  if ([action.key isEqualToString:@"openValveFour"]) {
-        tim = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInteger:4]];
-        
-    } else  if ([action.key isEqualToString:@"openValveFive"]) {
-        tim = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInteger:5]];
-        
-    } else {
-        [cell setTimerCommandOff:-1];
-        [cell setTimerCommandOn:-1];
-    }
-    if (tim != nil) {
-        [cell setTimerCommandOn:tim.timeOn];
-        [cell setTimerCommandOff:tim.timeOff];
-    }
-    NSLog(@"Executar valve %ld", (long)[Suporte getInstancia].valveExecute);
-    if ([[Suporte getInstancia] valveExecute] == tim.valve) {
-        [cell executeTimer];
-    } else {
-        [cell pause];
-    }
+//    TimerCommand * tim = nil;
+//    if ([action.key isEqualToString:@"openValveOne"]) {
+//        tim = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInteger:1]];
+//    } else  if ([action.key isEqualToString:@"openValveTwo"]) {
+//        tim = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInteger:2]];
+//        
+//    } else  if ([action.key isEqualToString:@"openValveThree"]) {
+//        tim = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInteger:3]];
+//        
+//    } else  if ([action.key isEqualToString:@"openValveFour"]) {
+//        tim = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInteger:4]];
+//        
+//    } else  if ([action.key isEqualToString:@"openValveFive"]) {
+//        tim = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInteger:5]];
+//        
+//    } else {
+//        [cell setTimerCommandOff:-1];
+//        [cell setTimerCommandOn:-1];
+//    }
+//    if (tim != nil) {
+//        [cell setTimerCommandOn:tim.timeOn];
+//        [cell setTimerCommandOff:tim.timeOff];
+//    }
+//    NSLog(@"Executar valve %ld", (long)[Suporte getInstancia].valveExecute);
+//    if ([[Suporte getInstancia] valveExecute] == tim.valve) {
+//        [cell executeTimer];
+//    } else {
+//        [cell pause];
+//    }
     MOSDynamicTableViewCell *weakCell = cell;
     
     cell.goAction = ^(NSNumber *cmdId, NSArray *arguments) {
