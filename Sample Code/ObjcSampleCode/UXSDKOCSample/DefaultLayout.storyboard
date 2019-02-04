@@ -131,8 +131,6 @@
                                 <state key="normal" image="timer"/>
                                 <connections>
                                     <action selector="acaoAbrirTimer:" destination="kK5-JH-qAX" eventType="touchUpInside" id="ecx-ti-gYo"/>
-                                    <action selector="acaoBotaoMenos:" destination="kK5-JH-qAX" eventType="touchUpInside" id="sTW-mU-6J5"/>
-                                    <action selector="acaoReseta:" destination="kK5-JH-qAX" eventType="touchUpInside" id="otD-49-xkq"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NA-h1-04q">

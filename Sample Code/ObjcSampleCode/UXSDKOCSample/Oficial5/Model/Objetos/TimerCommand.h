@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger valve;
 @property (nonatomic, assign) BOOL executeOn;
 @property (nonatomic, assign) BOOL executado;
+@property (nonatomic, assign) BOOL executandoOff;
 @property (nonatomic, assign) u_int16_t comando;
 @end
 

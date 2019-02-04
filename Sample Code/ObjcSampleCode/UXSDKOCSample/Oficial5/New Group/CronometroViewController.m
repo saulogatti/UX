@@ -62,19 +62,13 @@
     return [_timerExecutando.description stringByAppendingFormat:@" %02d:%02d", minutes, seconds];
 }
 - (IBAction)acaoBotaInicia:(id)sender {
-//    _valve = 1;
-//    NSMutableDictionary * dic = [[Suporte getInstancia] listTimer];
-//    TimerCommand * tim = [dic objectForKey:[NSNumber numberWithInteger:_valve]];
-//    if (tim != nil) {
-//        _tempoTimer = tim.timeOn;
-//        tim.executeOn = YES;
-//    }
+    if (_timer != nil) {
+        [_timer invalidate];
+        _timer = nil;
+    }
     if (_timer == nil) {
         _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(executaTimer) userInfo:nil repeats:YES];
         
-    } else {
-        [_timer invalidate];
-        _timer = nil;
     }
 }
 
@@ -119,10 +113,12 @@
 }
 
 - (IBAction)acaoRestart:(id)sender {
-        for (int i = 1; i < 6; i++) {
-            TimerCommand * timer = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInt:i]];
-            [timer setExecutado:NO];
-        }
+    for (int i = 1; i < 6; i++) {
+        TimerCommand * timer = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInt:i]];
+        [timer setExecutado:NO];
+        [timer setExecuteOn:NO];
+        [timer setExecutandoOff:NO];
+    }
     _labelTempo.text = @"Reset OK";
 }
 - (IBAction)acaoPause:(id)sender {
@@ -135,22 +131,29 @@
             TimerCommand * timer = [[[Suporte getInstancia] listTimer] objectForKey:[NSNumber numberWithInt:i]];
             if (timer != nil && (timer.timeOn > 0 || timer.timeOff > 0) && !timer.executado) {
                 if (timer.timeOn > 0) {
-                    _timerExecutando = timer;
-                    timer.executeOn = YES;
-                    _tempoTimer = timer.timeOn;
+                    if (!timer.executeOn){
+                        _timerExecutando = timer;
+                        timer.executeOn = YES;
+                        _tempoTimer = timer.timeOn;
+                    }
                     [self acaoBotaInicia:nil];
                     break;
                 } else if (timer.timeOff > 0) {
-                    _timerExecutando = timer;
-                    timer.executeOn = NO;
-                    _tempoTimer = timer.timeOff;
+                    if (![timer executandoOff]) {
+                        [timer setExecutandoOff:YES];
+                        _timerExecutando = timer;
+                        timer.executeOn = NO;
+                        _tempoTimer = timer.timeOff;
+                    }
+                    }
                     [self acaoBotaInicia:nil];
                     break;
                 }
-                 [self atualizarLabel];
+                [self atualizarLabel];
             }
         }
-    }
+    
+
 }
 
 @end
